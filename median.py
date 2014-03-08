@@ -33,14 +33,14 @@ def median(S):
 
 	C_sorted = sorted(C)
 
-	print n/2 + 1 - l, l, r, len(C)
+	#print n/2 + 1 - l, l, r, len(C)
 	median = C_sorted[ min(n/2 + 1 - l, len(C_sorted)-1)]
 
 	return median
 
 def main():
 	
-	num_exp = 1000
+	num_exp = 10000
 	max_element = 1000000
 	max_size = 10000
 
@@ -49,7 +49,7 @@ def main():
 	num_bad_median = 0
 
 	for i in range(num_exp):
-		size = randint(0,max_size-1)
+		size = randint(3,max_size-1)
 
 		S = [randint(0,max_element) for j in range(size)]
 
@@ -64,14 +64,14 @@ def main():
 
 		#start = time()
 		S_sorted = sorted(S)
-		middle_control = S_sorted[len(S_sorted)/2 +1]
+		middle_control = S_sorted[len(S_sorted)/2 + 1]
 		#elapsed = time()-start
 		#print elapsed
 
 		if middle_control!=middle:
 			num_bad_median += 1
 
-		print middle, middle_control
+		#print middle, middle_control
 
 	print float(num_fails) / float(num_exp)
 	print "\n"

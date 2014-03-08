@@ -12,5 +12,5 @@ also prints out the percent failure for the randomized algorithm.
 
 TODO
 =====
-- algorithm still returns index out of bounds on some lists. Problem
-  becomes less frequent as list size increases. 
+- Algorithm often returns bad median on small inputs. Returns correct
+  median almost always on large inputs.
